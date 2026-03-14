@@ -1,14 +1,14 @@
 version: '3.8'
 
 
-
 networks:
   app-network:
     driver: bridge
 
 
 volumes:
-  postgres_date:
+  postgres_data:
+    driver: local
 
 
 
