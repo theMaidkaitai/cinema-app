@@ -20,7 +20,8 @@
     "noUnusedParameters": false,
     "erasableSyntaxOnly": false,
     "noFallthroughCasesInSwitch": false,
-    "suppressImplicitAnyIndexErrors": true,
+    "ignoreDeprecations": "5.0",
+    "noUncheckedIndexedAccess": false,
     "noUncheckedSideEffectImports": true
   },
   "include": ["vite.config.ts"]
