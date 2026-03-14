@@ -1,9 +1,10 @@
 {
   "compilerOptions": {
     "strict": false,
-    "noImplicitAny": false,
+    "noImplicitAny": true,
     "suppressImplicitAnyIndexErrors": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+
   },
 
   "files": [],

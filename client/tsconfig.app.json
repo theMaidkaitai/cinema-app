@@ -22,7 +22,7 @@
     "noUnusedParameters": false,
     "erasableSyntaxOnly": false,
     "noFallthroughCasesInSwitch": false,
-    //"suppressImplicitAnyIndexErrors": true,
+    "suppressImplicitAnyIndexErrors": true,
     "noUncheckedSideEffectImports": true
   },
   "include": ["src"]
