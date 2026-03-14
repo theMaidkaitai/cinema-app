@@ -21,7 +21,7 @@ const MovieComponent = ({
                             onClick
                         }: MovieProps) => {
 
-    const [cover, setCover] = useState();
+    const [cover, setCover] = useState<string>();
     const [loading, setLoading] = useState(true);
 
     const navigate = useNavigate();
