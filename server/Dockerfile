@@ -7,7 +7,8 @@ RUN mvn clean package -DskipTests
 
 
 FROM eclipse-temurin:25-jre
-RUN addgroup spring && adduser -D -G spring spring
+RUN addgroup -g 1001 spring && \
+    adduser -D -H -u 1001 -G spring spring
 USER spring:spring
 ARG JAR_FILE=target/*.jar
 COPY --from=build /app/target/*.jar app.jar 
