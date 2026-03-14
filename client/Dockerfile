@@ -2,7 +2,7 @@ FROM node:20-alpine AS builder
 WORKDIR /app
 RUN npm install -g typescript
 COPY package*.json ./
-RUN NODE_ENV=development npm i
+RUN npm ci
 COPY . .
 RUN npm run build
 
