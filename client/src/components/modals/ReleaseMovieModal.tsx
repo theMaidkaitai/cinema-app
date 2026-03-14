@@ -5,7 +5,7 @@ import {releaseMovie} from "../../http/movieApi.ts";
 
 
 const ReleaseMovieModal = ({ isOpen, onClose }) => {
-    const [movieFile, setMovieFile] = useState(null);
+    const [movieFile, setMovieFile] = useState<File | null>(null);
     const [movieReleaseId, setMovieReleaseId] = useState<number | string>("");
 
     const {films} = useContext(Context)
@@ -14,7 +14,6 @@ const ReleaseMovieModal = ({ isOpen, onClose }) => {
         e.preventDefault();
 
         // TODO: не забыть сделать чтобы на беке ставился статус release
-        // @ts-ignore
         const formData = new FormData();
         formData.append("filmFile", movieFile);
         releaseMovie(formData, movieReleaseId)
@@ -24,7 +23,6 @@ const ReleaseMovieModal = ({ isOpen, onClose }) => {
 
     if (!isOpen) return null;
 
-    // @ts-ignore
     return (
         <div className="modal-overlay">
             <div className="modal-content">

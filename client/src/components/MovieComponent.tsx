@@ -31,7 +31,6 @@ const MovieComponent = ({
             const coverBlob = await fetchCoverMovie(path_cover_fileName)
             const coverUrl = URL.createObjectURL(coverBlob);
 
-            // @ts-ignore
             setCover(coverUrl)
             setLoading(false);
         }

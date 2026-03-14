@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState} from 'react';
+import React, {useContext,  useState} from 'react';
 import "../../styles/MovieModalStyle/MovieModalStyle.css";
 import {Context} from "../../main.tsx";
 import {deleteMovie} from "../../http/movieApi.ts";
@@ -7,7 +7,7 @@ import DefaultButtonComponent from "../DefaultButtonComponent.tsx";
 
 
 const DeleteMovieModal = ({ isOpen, onClose }) => {
-    const [id, setId] = useState<number>();
+    const [id, setId] = useState<string>();
     const {films} = useContext(Context)
 
 
@@ -15,13 +15,12 @@ const DeleteMovieModal = ({ isOpen, onClose }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(id);
-        deleteMovie(id)
+        deleteMovie(Number(id))
         onClose();
     };
 
     if (!isOpen) return null;
 
-    // @ts-ignore
     return (
         <div className="modal-overlay">
             <div className="modal-content">

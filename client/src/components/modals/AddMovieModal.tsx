@@ -9,8 +9,8 @@ import ButtonSubmitComponent from "../ButtonSubmitComponent.tsx";
 const AddMovieModal = ({ isOpen, onClose }) => {
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
-    const [filmFile, setFilmFile] = useState("");
-    const [coverFile, setCoverFile] = useState("");
+    const [filmFile, setFilmFile] = useState<File | null>();
+    const [coverFile, setCoverFile] = useState<File | null>();
     const [genre, setGenre] = useState("");
     const [type, setType] = useState('');
 

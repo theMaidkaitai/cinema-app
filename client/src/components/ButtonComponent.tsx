@@ -1,7 +1,6 @@
 import React from 'react';
 import "../styles/ButtonComponentStyle/ButtonStyle.css"
 
-// @ts-ignore
 const ButtonComponent = ({children, onClick}) => {
 
 
