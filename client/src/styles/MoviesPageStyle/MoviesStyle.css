@@ -1,0 +1,32 @@
+.movies-page-container {
+    margin-left: 10px;
+    margin-right: 20px;
+    width: calc(100% - 30px);
+    max-width: 1400px;
+}
+
+.movies-page-likes-components {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    width: 100%;
+}
+
+.movies-page-likes {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.movies-page-v {
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.movies-page-popular {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 30px;
+}

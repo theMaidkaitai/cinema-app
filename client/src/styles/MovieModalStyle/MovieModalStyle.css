@@ -1,0 +1,351 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    user-select: none;
+}
+
+.modal-content {
+    background: #1a1a2a;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modal-header h2 {
+    margin: 0;
+    color: rgb(230, 0, 11);
+    font-size: 24px;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+}
+
+.modal-close:hover {
+    color: rgb(230, 0, 11);
+}
+
+.modal-content form {
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    background: #2a2a3a;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: rgb(230, 0, 11);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.form-group input[type="file"] {
+    padding: 8px;
+    background: #2a2a3a;
+}
+
+.form-group input[type="file"]::-webkit-file-upload-button {
+    background: rgb(230, 0, 11);
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.form-group input[type="file"]::-webkit-file-upload-button:hover {
+    background: rgba(230, 0, 11, 0.8);
+}
+
+.file-name {
+    display: block;
+    margin-top: 5px;
+    color: #888;
+    font-size: 12px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-group.half {
+    flex: 1;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    padding: 20px 0 0 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-cancel {
+    padding: 10px 20px;
+    background: #2a2a3a;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-cancel:hover {
+    background: #3a3a4a;
+}
+
+
+
+.modal-content::-webkit-scrollbar {
+    width: 5px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background: rgb(230, 0, 11);
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        max-height: 95vh;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+
+.subscribe-modal {
+    max-width: 400px;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.subscribe-content {
+    padding: 20px;
+    background: #1a1a2a;
+}
+
+.modal-header {
+    padding: 20px;
+    background: #2a2a3a;
+    border-bottom: 1px solid #333;
+}
+
+.modal-header h2 {
+    margin: 0;
+    color: white;
+    font-size: 20px;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    color: #888;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: 0.2s;
+}
+
+.modal-close:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.slider-container {
+    margin-bottom: 30px;
+    background: #2a2a3a;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.slider-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: #888;
+    font-size: 14px;
+}
+
+.month-slider {
+    width: 100%;
+    height: 6px;
+    -webkit-appearance: none;
+    background: linear-gradient(90deg, rgb(230, 0, 11) 0%, rgb(230, 0, 11) 0%, #444 0%);
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+}
+
+.month-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 24px;
+    height: 24px;
+    background: rgb(230, 0, 11);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s;
+    box-shadow: 0 2px 8px rgba(230, 0, 11, 0.3);
+}
+
+.month-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.15);
+}
+
+.selected-duration {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.duration-text {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: rgba(230, 0, 11, 0.15);
+    padding: 8px 20px;
+    border-radius: 30px;
+    display: inline-block;
+}
+
+.price-section {
+    background: linear-gradient(135deg, #2a2a3a 0%, #222 100%);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.price-label {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.price-value {
+    color: rgb(230, 0, 11);
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.total-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background: #2a2a3a;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.total-price {
+    color: rgb(230, 0, 11);
+    font-weight: bold;
+}
+
+.modal-footer {
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+    background: #2a2a3a;
+    border-top: 1px solid #333;
+}
+
+.btn-cancel, .btn-submit {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-cancel {
+    background: transparent;
+    color: #888;
+    border: 1px solid #444;
+}
+
+.btn-cancel:hover {
+    background: #333;
+    color: white;
+}
+
+.btn-submit {
+    background: rgb(230, 0, 11);
+    color: white;
+}
+
+.btn-submit:hover {
+    background: rgb(200, 0, 9);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(230, 0, 11, 0.3);
+}

@@ -1,0 +1,157 @@
+.side-panel-container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 170px;
+    height: 100vh;
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    background: #0a0a1a;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+}
+
+.side-panel-buttons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: white;
+    margin-top: 10px;
+    user-select: none;
+    padding-bottom: 20px;
+    height: 100%; /* Важно */
+    overflow: hidden; /* Предотвращаем скролл всего контейнера */
+}
+
+.side-panel-base,
+.divider,
+.side-panel-container-header,
+.side-panel-search-input {
+    flex-shrink: 0; /* Эти элементы не сжимаются */
+}
+
+.side-panel-genres {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+    flex: 1 1 auto;
+    min-height: 0;
+    margin-bottom: 130px;
+}
+
+.side-panel-genres button {
+    width: 100%;
+    margin-bottom: 2px;
+    flex-shrink: 0;
+}
+
+.side-panel-base button {
+    width: 100%;
+    margin-bottom: 2px;
+}
+
+.side-panel-name {
+    color: rgb(230, 0, 11);
+    font-size: 16px;
+    text-align: center;
+}
+
+.side-panel-desc {
+    font-size: 13px;
+    opacity: 0.7;
+    text-align: center;
+}
+
+.side-panel-container-header {
+    margin-bottom: 10px;
+}
+
+.divider {
+    height: 2px;
+    background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.2) 20%,
+    rgba(255, 255, 255, 0.2) 80%,
+    transparent 100%);
+    margin-top: 2px;
+    margin-bottom: 2px;
+    width: 100%;
+}
+
+.side-panel-bottom-genres-name {
+    opacity: 0.7;
+    font-size: 16px;
+    align-self: flex-start;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+
+.side-panel-user-plash {
+    position: absolute;
+    bottom: 25px;
+    left: 5px;
+    width: 160px;
+    height: 120px;
+    background-color: #2a2a3a;
+    border-radius: 15px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    z-index: 1001;
+    cursor: pointer;
+}
+
+.side-panel-user-plash:hover {
+    box-shadow: 0 4px 12px rgba(121, 27, 27, 0.3);
+    background-color: rgba(164, 160, 160, 0.7);
+}
+
+.side-panel-user-info {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.user-info-icon {
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+}
+
+.user-text-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-name {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0;
+    color: white;
+}
+
+.user-status {
+    font-size: 12px;
+    color: #888;
+    margin: 2px 0 0 0;
+}
+
+.side-panel-user-button-container {
+    margin-top: auto;
+    width: 100%;
+}
+
+.side-panel-plash-info-user-name {
+    font-size: 14px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 90px;
+    white-space: normal;
+}
+
+.side-panel-plash-info-user-status {
+    font-size: 10px;
+}

@@ -1,0 +1,94 @@
+/* Добавьте в MovieModalStyle.css */
+
+.subscribe-modal {
+    max-width: 400px;
+}
+
+.subscribe-content {
+    padding: 20px;
+}
+
+.slider-container {
+    margin-bottom: 30px;
+}
+
+.slider-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: #888;
+    font-size: 14px;
+}
+
+.month-slider {
+    width: 100%;
+    height: 4px;
+    -webkit-appearance: none;
+    background: linear-gradient(90deg, rgb(230, 0, 11) 0%, rgb(230, 0, 11) 50%, #333 50%);
+    border-radius: 2px;
+    outline: none;
+}
+
+.month-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: rgb(230, 0, 11);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.month-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.1);
+}
+
+.selected-duration {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.duration-text {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: rgba(230, 0, 11, 0.2);
+    padding: 5px 15px;
+    border-radius: 20px;
+}
+
+.price-section {
+    background: linear-gradient(135deg, #2a2a3a 0%, #1a1a2a 100%);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.price-label {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.price-value {
+    color: rgb(230, 0, 11);
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.total-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-top: 1px solid #333;
+    color: white;
+    font-size: 18px;
+}
+
+.total-price {
+    color: rgb(230, 0, 11);
+    font-weight: bold;
+}
