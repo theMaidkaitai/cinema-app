@@ -37,7 +37,7 @@ services:
     networks:
       - app-network
     ports:
-      -"8080:8080"
+      - "8080:8080"
     expose:
       - "8080"
     container_name: server-container
