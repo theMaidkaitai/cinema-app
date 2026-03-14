@@ -43,7 +43,7 @@ services:
     container_name: server-container
     depends_on:
       db:
-        condition: service_heathly
+        condition: service_healthy
     environment:
       - SPRING_JPA_HIBERNATE_DDL_AUTO=validate
       - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/CinemaApp
