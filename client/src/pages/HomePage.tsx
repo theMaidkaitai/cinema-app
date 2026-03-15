@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState} from 'react';
+import  {useContext, useEffect, useState} from 'react';
 import "../styles/HomePageStyle/HomeStyle.css"
 import {Context} from "../main.tsx";
 import {getFavoritesByUser, getLikesByUser, getRecommendationsByUser} from "../http/movieApi.ts";
@@ -8,7 +8,6 @@ import MovieComponent from "../components/MovieComponent.tsx";
 import type {FilmData} from "../store/FilmStore.ts";
 import LoadingComponent from "../components/LoadingComponent.tsx";
 import CentredWarningComponent from "../components/CentredWarningComponent.tsx";
-import bleh from "../assets/bleh.gif"
 
 
 const HomePage = () => {

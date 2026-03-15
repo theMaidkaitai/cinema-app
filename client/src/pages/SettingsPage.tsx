@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState} from 'react';
+import  {useContext, useEffect, useState} from 'react';
 import "../styles/SettingsPageStyle/SettingsStyle.css"
 import SmallButtonComponent from "../components/SmallButtonComponent.tsx";
 import {Context} from "../main.tsx";

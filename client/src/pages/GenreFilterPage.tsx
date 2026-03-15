@@ -5,7 +5,9 @@ import {Context} from "../main.tsx";
 import {useParams, useSearchParams} from "react-router-dom";
 import "../styles/MoviesPageStyle/MoviesStyle.css"
 import LoadingComponent from "../components/LoadingComponent.tsx";
-import {observer} from "mobx-react/src";
+
+
+import { observer } from 'mobx-react-lite';
 
 
 const GenreFilterPage = observer(() => {

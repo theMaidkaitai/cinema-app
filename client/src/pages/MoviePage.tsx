@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState} from 'react';
+import  {useContext, useEffect, useState} from 'react';
 import "../styles/MoviePageStyle/MovieStyle.css"
 import starIcon from "../assets/star.png"
 import starIconBefore from "../assets/starBefore.png"

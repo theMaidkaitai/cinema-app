@@ -1,4 +1,4 @@
-import React, {useContext, useEffect} from 'react';
+import  {useContext, useEffect} from 'react';
 import type {FilmData} from "../store/FilmStore.ts";
 import MovieComponent from "../components/MovieComponent.tsx";
 import {Context} from "../main.tsx";

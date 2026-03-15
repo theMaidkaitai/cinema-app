@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState} from 'react';
+import {useContext, useEffect, useState} from 'react';
 import MovieComponent from "../components/MovieComponent.tsx";
 import "../styles/MoviesPageStyle/MoviesStyle.css"
 import PopularFilmComponent from "../components/PopularFilmComponent.tsx";
