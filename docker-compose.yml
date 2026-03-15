@@ -41,7 +41,7 @@ services:
     expose:
       - "8080"
     volumes:
-      - ./uploads:/app/uploads
+      - ./uploads:/uploads
     container_name: server-container
     depends_on:
       db:
