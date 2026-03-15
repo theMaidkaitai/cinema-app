@@ -40,6 +40,8 @@ services:
       - "8080:8080"
     expose:
       - "8080"
+    volumes:
+      - ./uploads:/app/uploads
     container_name: server-container
     depends_on:
       db:

@@ -11,7 +11,6 @@ import java.util.UUID;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
 import org.springframework.stereotype.Service;
-import org.springframework.web.multipart.MultipartFile;
 
 
 @Service
@@ -22,6 +21,9 @@ public class FilesService {
         this.fileStorageLocation = Paths.get("uploads").toAbsolutePath().normalize();
 
         try {
+            if (!Files.exists(this.fileStorageLocation)) {
+                Files.createDirectories(this.fileStorageLocation);
+            }
             Files.createDirectories(this.fileStorageLocation);
         } catch (Exception e) {
             throw new RuntimeException("Could not create upload directory", e);
