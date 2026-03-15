@@ -25,6 +25,7 @@ public class FilesService {
                 Files.createDirectories(this.fileStorageLocation);
             }
             Files.createDirectories(this.fileStorageLocation);
+
         } catch (Exception e) {
             throw new RuntimeException("Could not create upload directory", e);
         }
