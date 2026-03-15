@@ -1,9 +1,11 @@
 import {$authHost, $nonAuthHost} from "./config/http-client.ts";
 import type {MovieIdsData} from "./data interfaces/movie/MovieIdsData.ts";
 
+
+
 export const fetchFilms = async () => {
     try {
-        const {data} = await $authHost.get("film/api/stream/get/movies");
+        const {data} = await $authHost.get("api/film/stream/get/movies");
         return data;
     }
     catch (error) {
@@ -14,7 +16,7 @@ export const fetchFilms = async () => {
 
 export const fetchFilm = async (id: string | undefined) => {
     try {
-        const {data} = await $authHost.get(`film/api/stream/get/movie/${id}`);
+        const {data} = await $authHost.get(`api/film/stream/get/movie/${id}`);
         return data;
     }
     catch (error) {
@@ -27,7 +29,7 @@ export const fetchFilm = async (id: string | undefined) => {
 export const addMovie = async (formData: FormData) => {
     try {
 
-        const {data} = await $authHost.post('film/api/stream/add/movie', formData, {
+        const {data} = await $authHost.post('api/film/stream/add/movie', formData, {
             headers: {
                 'Content-Type': 'multipart/form-data'
             }
@@ -45,7 +47,7 @@ export const addMovie = async (formData: FormData) => {
 export const releaseMovie = async (formData: FormData, id: number | string) => {
     try {
 
-        const {data} = await $authHost.post(`film/api/stream/release/movie/${id}`, formData, {
+        const {data} = await $authHost.post(`api/film/stream/release/movie/${id}`, formData, {
             headers: {
                 'Content-Type': 'multipart/form-data'
             }
@@ -74,7 +76,7 @@ export const releaseMovie = async (formData: FormData, id: number | string) => {
 
 export const fetchCoverMovie = async (fileName: string | undefined) => {
     try {
-        const response = await $authHost.get(`film/api/stream/cover/${fileName}`, {
+        const response = await $authHost.get(`api/film/stream/cover/${fileName}`, {
             responseType: 'blob',
             headers: {
                 'Accept': 'image/*'
@@ -90,7 +92,7 @@ export const fetchCoverMovie = async (fileName: string | undefined) => {
 
 export const fetchAllGenres = async () => {
     try {
-        const { data } = await $nonAuthHost.get(`film/api/other/get/genres`);
+        const { data } = await $nonAuthHost.get(`api/film/other/get/genres`);
         return data;
     }
     catch (error) {
@@ -101,7 +103,7 @@ export const fetchAllGenres = async () => {
 
 export const deleteMovie = async (id: number | undefined) => {
     try {
-        const { data } = await $authHost.delete(`film/api/other/delete/movie/${id}`)
+        const { data } = await $authHost.delete(`api/film/other/delete/movie/${id}`)
         return data;
     }
     catch (error) {
@@ -113,7 +115,7 @@ export const deleteMovie = async (id: number | undefined) => {
 
 export const likeMovie = async (dataI: MovieIdsData) => {
     try {
-        const { data } = await $authHost.post(`film/api/action/like/movie`, dataI)
+        const { data } = await $authHost.post(`api/film/action/like/movie`, dataI)
         return data;
     }
     catch (error) {
@@ -124,7 +126,7 @@ export const likeMovie = async (dataI: MovieIdsData) => {
 
 export const checkLiked = async (dataI: undefined | MovieIdsData) => {
     try {
-        const { data } = await $authHost.get(`film/api/action/check/like/movie`, {
+        const { data } = await $authHost.get(`api/film/action/check/like/movie`, {
             params: {
                 movieId: dataI?.movieId,
                 userId: dataI?.userId
@@ -141,7 +143,7 @@ export const checkLiked = async (dataI: undefined | MovieIdsData) => {
 
 export const getLikesByUser = async (id: number | undefined) => {
     try {
-        const { data } = await $authHost.get(`film/api/other/get/likes/movie/${id}`)
+        const { data } = await $authHost.get(`api/film/other/get/likes/movie/${id}`)
         return data;
     }
     catch (error) {
@@ -152,7 +154,7 @@ export const getLikesByUser = async (id: number | undefined) => {
 
 export const getRecommendationsByUser = async (id: number | undefined) => {
     try {
-        const { data } = await $authHost.get(`film/api/other/get/recs/movie/${id}`)
+        const { data } = await $authHost.get(`api/film/other/get/recs/movie/${id}`)
         return data;
     }
     catch (error) {
@@ -178,7 +180,7 @@ export const getRecommendationsByUser = async (id: number | undefined) => {
 
 export const addFavoriteMovie = async (dataI: MovieIdsData) => {
     try {
-        const { data } = await $authHost.post(`film/api/action/add/favorite/movie`, dataI)
+        const { data } = await $authHost.post(`api/film/action/add/favorite/movie`, dataI)
         return data;
     }
     catch (error) {
@@ -189,7 +191,7 @@ export const addFavoriteMovie = async (dataI: MovieIdsData) => {
 
 export const getFavoritesByUser = async (id: number | undefined) => {
     try {
-        const { data } = await $authHost.get(`film/api/other/get/favorites/movie/${id}`)
+        const { data } = await $authHost.get(`api/film/other/get/favorites/movie/${id}`)
         return data;
     }
     catch (error) {
@@ -200,7 +202,7 @@ export const getFavoritesByUser = async (id: number | undefined) => {
 
 export const checkFavs = async (dataI: undefined | MovieIdsData) => {
     try {
-        const { data } = await $authHost.get(`film/api/action/check/favorite/movie`, {
+        const { data } = await $authHost.get(`api/film/action/check/favorite/movie`, {
             params: {
                 movieId: dataI?.movieId,
                 userId: dataI?.userId

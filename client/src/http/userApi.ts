@@ -5,7 +5,7 @@ import type {UserLoginInterface} from "./data interfaces/user/userLoginInterface
 
 export const registerUser = async (dataInterface: UserInterface) => {
     try {
-        const response = await $nonAuthHost.post("auth/api/register", dataInterface);
+        const response = await $nonAuthHost.post("api/register", dataInterface);
 
         const responseData = response.data;
         console.log("Response from server:", responseData);
@@ -32,7 +32,7 @@ export const registerUser = async (dataInterface: UserInterface) => {
 
 export const loginUser = async (dataInterface: UserLoginInterface) => {
     try {
-        const response = await $nonAuthHost.post("auth/api/login", dataInterface);
+        const response = await $nonAuthHost.post("api/login", dataInterface);
 
         const responseData = response.data;
         console.log("Response from server:", responseData);
@@ -60,7 +60,7 @@ export const loginUser = async (dataInterface: UserLoginInterface) => {
 
 export const refreshAccessToken = async () => {
     try {
-        const response = await $nonAuthHost.post("auth/api/refresh", {});
+        const response = await $nonAuthHost.post("api/refresh", {});
 
         const responseData = response.data;
 

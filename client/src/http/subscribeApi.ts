@@ -4,7 +4,7 @@ import type {subscribeReqInterface} from "./data interfaces/subscribe/subscribeR
 
 export const subscribe = async (dataReq: subscribeReqInterface) => {
     try {
-        const {data} = await $authHost.post("subscribe/api/create", dataReq);
+        const {data} = await $authHost.post("api/subscribe/create", dataReq);
         return data;
     }
     catch (error) {
