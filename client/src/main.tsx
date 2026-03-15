@@ -5,6 +5,7 @@ import UserStore from "./store/UserStore.ts";
 import  FilmStore from "./store/FilmStore.ts";
 import  GenresStore from "./store/GenresStore.ts";
 import SearchStore from "./store/SearchStore.ts";
+import type { IValueMap } from 'mobx-react/src/types/IValueMap.ts';
 
 interface ContextValue {
     user: UserStore,
