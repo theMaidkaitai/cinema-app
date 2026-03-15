@@ -77,7 +77,8 @@ public class WebSecurity {
     @Bean
     UrlBasedCorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(Arrays.asList("http://localhost:5173")); // ip add
+        configuration.setAllowedOrigins(Arrays.asList("http://37.139.62.32"));
+        configuration.setAllowedOrigins(Arrays.asList("https://37.139.62.32"));  // ip add
         configuration.setAllowedHeaders(Arrays.asList("*"));
         configuration.setAllowedMethods(Arrays.asList("GET","POST", "PUT","DELETE","OPTIONS"));
         configuration.setAllowedHeaders(Arrays.asList(
