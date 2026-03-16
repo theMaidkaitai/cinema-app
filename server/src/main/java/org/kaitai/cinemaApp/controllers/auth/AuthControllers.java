@@ -112,5 +112,7 @@ public class AuthControllers {
             System.err.println(e);
             throw new HttpException("Ошибка сервера", HttpStatusCodeEnums.UNEXPECTED);
         }
+
+        
     }
 }
